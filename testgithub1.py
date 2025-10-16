@@ -14,9 +14,13 @@ class Calculatrice():
     def division(self, a, b):
         if b == 0:
             return "division par zéro impossible"
-        return a / b
+        else :
+             
 
     def fib(self, n):
         if n <= 1:
             return n
         return self.fib(n - 1) + self.fib(n - 2)
+
+    def premier(self, n):
+        pass
