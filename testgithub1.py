@@ -9,7 +9,8 @@ class Calculatrice():
         return a - b
 
     def multiplication(self, a, b):
-        return a * b
+        for n in range(b-1):
+            print (self.addition(a, a))
 
     def division(self, a, b):
         if b == 0:
@@ -20,3 +21,6 @@ class Calculatrice():
         if n <= 1:
             return n
         return self.fib(n - 1) + self.fib(n - 2)
+
+calculatrice = Calculatrice()
+calculatrice.multiplication(1,6)
