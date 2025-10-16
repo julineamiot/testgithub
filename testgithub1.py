@@ -9,7 +9,8 @@ class Calculatrice():
         return a - b
 
     def multiplication(self, a, b):
-        return a * b
+
+        return self.addition(a, a)
 
     def division(self, a, b):
         if b == 0:
