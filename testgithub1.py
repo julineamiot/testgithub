@@ -3,7 +3,7 @@ class Calculatrice():
         pass
 
     def addition(self, a, b):
-        return a + b + 3b
+        return a + b
 
     def soustraction(self, a, b):
         return a - b
@@ -18,7 +18,10 @@ class Calculatrice():
         if b == 0:
             return "division par zéro impossible"
         else :
-             
+            resultat2 = 0
+            for n in range(b):
+                resultat2 = self.multiplication(resultat2, a)
+        return resultat2
 
     def fib(self, n):
         if n <= 1:
@@ -29,5 +32,4 @@ calculatrice = Calculatrice()
 print(calculatrice.multiplication(2,6))
 print(calculatrice.division(2,6))
 
-    def premier(self, n):
-        pass
+#faire une interface console au lieu de faire une interface graphique : ex : demander à l'utilisateur de taper un chiffre => si il tape 1, alors il fera une addition, etc...
