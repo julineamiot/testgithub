@@ -9,8 +9,10 @@ class Calculatrice():
         return a - b
 
     def multiplication(self, a, b):
-
-        return self.addition(a, a)
+        resultat = 0
+        for n in range(b):
+            resultat = self.addition(resultat, a)
+        return resultat
 
     def division(self, a, b):
         if b == 0:
@@ -22,6 +24,10 @@ class Calculatrice():
         if n <= 1:
             return n
         return self.fib(n - 1) + self.fib(n - 2)
+
+calculatrice = Calculatrice()
+print(calculatrice.multiplication(2,6))
+print(calculatrice.division(2,6))
 
     def premier(self, n):
         pass
