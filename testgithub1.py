@@ -9,13 +9,13 @@ class Calculatrice():
         return a - b
 
     def multiplication(self, a, b):
-        return a * b
+        pass
 
     def division(self, a, b):
         if b == 0:
             return "division par zéro impossible"
         else :
-             
+
 
     def fib(self, n):
         if n <= 1:
