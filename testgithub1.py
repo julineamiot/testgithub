@@ -3,7 +3,7 @@ class Calculatrice():
         pass
 
     def addition(self, a, b):
-        return a + b + 2b
+        return a + b + 3b
 
     def soustraction(self, a, b):
         return a - b
