@@ -1,5 +1,18 @@
 #Projet calculatrice
-#DESMOTTES Henri et AMIOT Juline
+print("AMIOT Juline et DESMOTTES Henri")
+
+
+print()
+print()
+print("Vous allez effectuer des calculs à l'aide d'une calculatrice.")
+print("Commençons par rappeler quelques règles de calculs.")
+print("Vous ne pouvez pas diviser par 0.")
+print("Notre calculatrice ne peut pas avoir comme exposant un nombre négatif.")
+print("La suite de Fibonacci se calcule que pour des entiers naturels.")
+print("Un nombre premier est forcément un entier naturel.")
+print("Enfin, la règle la plus importante à respecter pour utiliser notre calculatrice est qu'elle n'accepte que les entiers.")
+print()
+
 
 class Calculatrice():
     def __init__(self):
@@ -94,11 +107,12 @@ def menu():
     print("Choississez une opération à effectuer :")
     print("1 : Addition")
     print("2 : Soustraction")
-    print("3 : Multiplication")
-    print("4 : Division")
-    print("5 : Fibonacci")
-    print("6 : Puissance")
-    print("7 : Vérifier nombre premier")
+    print("3 : valeur absolue")
+    print("4 : Multiplication")
+    print("5 : Division")
+    print("6 : Fibonacci")
+    print("7 : Puissance")
+    print("8 : Vérifier nombre premier")
     print("0 : Quitter")
 
 while True: #boucle infinie
@@ -109,40 +123,48 @@ while True: #boucle infinie
         if choix == "0":
             print("Au revoir")
             break
+
         elif choix == "1":
             a = int(input("Entrez le premier nombre : "))
             b = int(input("Entrez le second nombre : "))
             print("Résultat :", calc.addition(a, b))
             print()
+
         elif choix == "2":
             a = int(input("Entrez le premier nombre : "))
             b = int(input("Entrez le second nombre : "))
             print("Résultat :", calc.soustraction(a, b))
             print()
+
         elif choix == "3":
-                   a = int(input("Entrez le nombre : "))
-                   print("Résultat :", calc.valeur_absolue(a))
-                   print()
+            a = int(input("Entrez le nombre : "))
+            print("Résultat :", calc.valeur_absolue(a))
+            print()
+
         elif choix == "4":
             a = int(input("Entrez le premier nombre : "))
             b = int(input("Entrez le second nombre : "))
             print("Résultat :", calc.multiplication(a, b))
             print()
+
         elif choix == "5":
             a = int(input("Entrez le premier nombre : "))
             b = int(input("Entrez le second nombre : "))
             q, r = calc.division(a, b)
             print(f"Quotient : {q}, reste : {r}")
             print()
+
         elif choix == "6":
             n = int(input("Entrez n pour Fibonacci : "))
             print(f"F({n}) =", calc.fibonacci(n))
             print()
+
         elif choix == "7":
             a = int(input("Entrez la base a : "))
             b = int(input("Entrez l'exposant b : "))
             print(f"{a}^{b} =", calc.puissance(a, b))
             print()
+
         elif choix == "8":
             n = int(input("Entrez le nombre à tester : "))
             if calc.est_premier(n):
@@ -150,6 +172,7 @@ while True: #boucle infinie
             else:
                 print(n, "n'est pas premier")
             print()
+
         else:
             print("Choix invalide, réessayez")
 
