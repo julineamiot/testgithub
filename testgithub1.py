@@ -1,3 +1,6 @@
+#Projet calculatrice
+#DESMOTTES Henri et AMIOT Juline
+
 class Calculatrice():
     def __init__(self):
         pass
