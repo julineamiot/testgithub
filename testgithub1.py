@@ -44,11 +44,11 @@ class Calculatrice():
         signe = 1
         if a < 0:
             a = self.valeur_absolue(a)
-            signe *= -1
+            signe = (-1)*signe
 
         if b < 0:
             b = self.valeur_absolue(b)
-            signe *= -1
+            signe = (-1)*signe
 
         quotient = 0  # quotient : le résultat final qu’on va calculer (10/3, quotient = 3)
         reste = a  # reste : ce qu'il reste à diviser au fur et à mesure (10/3, reste au début = 10)
@@ -57,9 +57,9 @@ class Calculatrice():
             reste = self.soustraction(reste, b)
             quotient = self.addition(quotient, 1)  # à chaque étape réussie, le quotient augmente de 1
 
-        quotient *= signe
+        quotient = quotient * signe
         if signe < 0:
-            reste = -reste
+            reste = - reste
 
         return quotient, reste
 
