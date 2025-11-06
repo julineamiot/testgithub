@@ -44,7 +44,7 @@ class Calculatrice():
         signe = 1
         if a < 0:
             a = self.valeur_absolue(a)
-            signe = (-1)*signe
+            signe = (-1)*signe # le signe est -1 car a est négatif
 
         if b < 0:
             b = self.valeur_absolue(b)
